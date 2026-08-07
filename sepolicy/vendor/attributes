@@ -1,0 +1,14 @@
+# Camera AON
+attribute hal_camera_aon;
+attribute hal_camera_aon_client;
+attribute hal_camera_aon_server;
+
+# Ozoaudio
+attribute vendor_hal_ozonotify;
+attribute vendor_hal_ozonotify_client;
+attribute vendor_hal_ozonotify_server;
+
+# SLA
+attribute hal_slaservice;
+attribute hal_slaservice_client;
+attribute hal_slaservice_server;

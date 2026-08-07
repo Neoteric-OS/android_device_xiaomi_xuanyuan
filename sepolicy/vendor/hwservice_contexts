@@ -1,0 +1,5 @@
+# Ozoaudio
+com.android.ozoaudio.notify::IOzoNotify                         u:object_r:vendor_hal_ozonotify_hwservice:s0
+
+# SLA
+vendor.qti.sla.service::ISlaService             u:object_r:hal_slaservice_hwservice:s0

@@ -1,0 +1,24 @@
+# Camera
+vendor.xiaomi.hardware.aon.IAlwaysOn/miaonservicehal           u:object_r:vendor_hal_camera_aon_service:s0
+
+# CIT
+# EID
+vendor.rongcard.eid.IEidDeviceAidl/default                                u:object_r:vendor_hal_eid_service:s0
+
+# Fingerprint
+com.fingerprints.extension3.IFingerprintNavigation/default              u:object_r:vendor_hal_fingerprint_service_xiaomi:s0
+com.fingerprints.extension3.IFingerprintSensorTest/default              u:object_r:vendor_hal_fingerprint_service_xiaomi:s0
+vendor.xiaomi.hardware.fingerprintextension.IXiaomiFingerprint/default  u:object_r:vendor_hal_fingerprint_service_xiaomi:s0
+vendor.xiaomi.hardware.fx.tunnel.IMiFxTunnel/default                    u:object_r:vendor_hal_fingerprint_service_xiaomi:s0
+
+# Micharge
+vendor.xiaomi.hardware.micharge.IMiCharge/default   u:object_r:vendor_hal_micharge_xiaomi_service:s0
+
+# Ozoaudio
+com.android.ozoaudio.notify.IOzoNotify/default                       u:object_r:vendor_hal_ozonotify_service:s0
+
+# Qspmhal
+vendor.qti.qspmhal.IQspmhal/default                           u:object_r:vendor_hal_qspmhal_service:s0
+
+# Vibrator
+android.hardware.vibrator.IVibrator/vibratorfeature                          u:object_r:hal_vibrator_service:s0
