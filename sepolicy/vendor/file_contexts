@@ -20,6 +20,9 @@
 # MiCharge
 /(vendor|system/vendor)/bin/hw/vendor.xiaomi.hardware.micharge-service     u:object_r:vendor_hal_micharge_xiaomi_default_exec:s0
 
+# Media
+/(vendor|system/vendor)/bin/hw/android\.hardware\.media\.c2-mi-service u:object_r:mediacodec_exec:s0
+
 # Modem
 /system/vendor/bin/loc_launcher u:object_r:vendor_location_exec:s0
 /vendor/bin/qrtr-lookup u:object_r:vendor_qrtr_exec:s0

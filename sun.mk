@@ -84,14 +84,20 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.common-V1-ndk \
     android.hardware.audio.common-V2-ndk \
     android.hardware.audio.common-V3-ndk \
-    android.hardware.audio.core-V2-ndk.vendor
+    android.hardware.audio.core.sounddose-V1-ndk.vendor \
+    android.hardware.audio.effect-V3-ndk.vendor \
+    android.hardware.audio.core-V2-ndk.vendor \
+    android.hardware.soundtrigger3-V1-ndk.vendor \
+    vendor.qti.hardware.agm-V1-ndk \
+    vendor.qti.hardware.paleventnotifier-V2-ndk.vendor
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8750/audio/primary-hal
 
-# The AIDL HAL keeps its topology in audio_module_config_primary.xml, so the
-# policy config itself comes straight from the device (see proprietary-files).
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/bluetooth_qti_hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/audio/audio_module_config_primary.xml:$(TARGET_COPY_OUT_ODM)/etc/audio/audio_module_config_primary.xml
 
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/sun/mem_logger_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mem_logger_config.xml \
@@ -225,8 +231,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.postproc-V1-ndk.vendor
 
 # Dolby
-PRODUCT_PACKAGES += \
-    XiaomiDolby
+#PRODUCT_PACKAGES += \
+#    XiaomiDolby
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -250,6 +256,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,XIAOMI_BIOMETRICS_FINGERPRINT,USE_NEW_IMPL,true)
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.xiaomi \
+    android.hardware.biometrics.fingerprint-V5-ndk.vendor \
     libudfpshandler
 
 PRODUCT_COPY_FILES += \
@@ -474,6 +481,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
+
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.power-V4-ndk.vendor \

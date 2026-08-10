@@ -132,13 +132,13 @@ odm/lib/rfsa/adsp/libmlawbpostproc_dsp_skel.so
 odm/lib/rfsa/adsp/libQnnHtpV79.so
 odm/lib/rfsa/adsp/libQnnHtpV79Skel.so
 odm/lib/rfsa/adsp/libQnnSaver.so
-odm/lib/rfsa/adsp/libSnpeHtpV79Skel.so
+odm/lib/rfsa/adsp/libSnpeHtpV79Skel.so;SYMLINK=vendor/lib/rfsa/adsp/libSnpeHtpV79Skel.so
 odm/lib64/rfs/dsp/libapn_dsp_skel.so
-odm/lib64/rfs/dsp/libbitml_nsp_73na_skel.so
-odm/lib64/rfs/dsp/libbitml_nsp_79na_skel.so
+odm/lib64/rfs/dsp/libbitml_nsp_73na_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libbitml_nsp_73na_skel.so
+odm/lib64/rfs/dsp/libbitml_nsp_79na_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libbitml_nsp_79na_skel.so
 odm/lib64/rfs/dsp/libbitml_nsp_skel.so
 odm/lib64/rfs/dsp/libhdr_skel.so
-odm/lib64/rfs/dsp/libqsegnetengine_dsp_skel.so
+odm/lib64/rfs/dsp/libqsegnetengine_dsp_skel.so;SYMLINK=vendor/lib64/rfs/dsp/libqsegnetengine_dsp_skel.so
 vendor/lib/rfsa/adsp/activity.napp_header
 vendor/lib/rfsa/adsp/activity.so
 vendor/lib/rfsa/adsp/chre_qsh_shim.so
@@ -225,6 +225,7 @@ vendor/etc/vintf/manifest/audioeffectservice_qti.xml
 vendor/etc/vintf/manifest/manifest_audio_qti_services.xml
 vendor/etc/vintf/manifest/manifest_audiocorehal_default.xml
 vendor/etc/vintf/manifest/qasr_vintf.xml
+vendor/etc/vintf/manifest/soundtrigger.qti.xml
 vendor/lib64/android.hardware.bluetooth.audio-impl.so
 vendor/lib64/android.media.audio.common.types-V6-ndk.so
 vendor/lib64/hw/libaudiocorehal.default.so
@@ -276,7 +277,6 @@ vendor/lib64/vendor.qti.hardware.ListenSoundModelAidl-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.qasr-V2-ndk.so
 
 # Audio (Config)
-odm/etc/audio/audio_module_config_primary.xml
 odm/etc/audio/sku_sun/adsp_sleep_monitor.conf
 odm/etc/audio/sku_sun/mixer_paths_overlay_dynamic.xml
 odm/etc/audio/sku_sun/mixer_paths_overlay_static.xml
@@ -285,6 +285,7 @@ odm/etc/audio/sku_sun/resourcemanager_sun_mtp.xml
 odm/etc/backend_conf.xml
 odm/etc/usecaseKvManager.xml
 vendor/etc/audio/audio_module_config_primary.xml
+vendor/etc/audio/vendor_audio_interfaces.xml
 vendor/etc/audio/sku_sun/audio_effects.conf
 vendor/etc/audio/sku_sun/audio_effects.xml
 vendor/etc/audio/sku_sun/audio_effects_config.xml
@@ -318,7 +319,7 @@ odm/firmware/T-cs35l43-dsp1-spk-prot.bin
 
 # Audio FX modules
 vendor/lib64/libmisops.so
-vendor/lib64/libmisoundfx_aidl_ext.so
+vendor/lib64/libmisoundfx_aidl_ext.so;SYMLINK=vendor/lib64/soundfx/libmisoundfx_aidl.so
 vendor/lib64/soundfx/libaudiopreprocessing.so
 vendor/lib64/soundfx/libbundleaidl.so
 vendor/lib64/soundfx/libbundlewrapper.so
@@ -1401,9 +1402,9 @@ odm/lib64/com.xiaomi.immunesystem.hook.mivi.so
 odm/lib64/com.xiaomi.immunesystem.hook.mtkhal.so
 odm/lib64/com.xiaomi.plugin.ecdengine.so
 odm/lib64/hw/camera.qcom.sm8750.so
-odm/lib64/hw/camera.qcom.so
+odm/lib64/hw/camera.qcom.so;SYMLINK=vendor/lib64/hw/camera.qcom.so
 odm/lib64/hw/com.qti.chi.offline.so
-odm/lib64/hw/com.qti.chi.override.so
+odm/lib64/hw/com.qti.chi.override.so;SYMLINK=vendor/lib64/hw/com.qti.chi.override.so
 odm/lib64/immunesystem.db.sqlite3.so
 odm/lib64/libadaptivehdr.so
 odm/lib64/libAF.so
@@ -1600,7 +1601,7 @@ odm/lib64/libsfeShiftExtrapolation.so
 odm/lib64/libshadowhook.so
 odm/lib64/libsiminputgenutil.so
 odm/lib64/libsimulation.so
-odm/lib64/libSNPE.so
+odm/lib64/libSNPE.so;SYMLINK=vendor/lib64/libSNPE.so
 odm/lib64/libSnpeHta.so
 odm/lib64/libSnpeHtpPrepare.so
 odm/lib64/libSnpeHtpV79CalculatorStub.so
@@ -3645,6 +3646,8 @@ vendor/etc/init/tlpd.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.tftp.rc
 vendor/etc/ITVDD.txt
+vendor/etc/Hapticsconfig.xml
+vendor/etc/HapticsPolicy.xml
 vendor/etc/modem/Diag.cfg
 vendor/etc/modem/Diag_data.cfg
 vendor/etc/modem/Diag_default.cfg
@@ -4450,6 +4453,9 @@ vendor/lib64/libdolbyproxyandroid.so
 vendor/bin/hw/android.hardware.media.c2-mi-service
 vendor/etc/init/android.hardware.media.c2-mi-service.rc
 vendor/etc/vintf/manifest/media_c2_mi.xml
+vendor/lib64/libcodec2_soft_aihc_dec.so
+vendor/lib64/libcodec2_soft_aihc_enc.so
+vendor/lib64/libcodec2_soft_common.so
 vendor/lib64/libcodec2_soft_mihc_dec.so
 vendor/lib64/libcodec2_soft_mihc_enc.so
 vendor/lib64/libcodec2_store_mi.so
@@ -4575,3 +4581,5 @@ vendor/lib64/libaudioutils.so
 vendor/lib64/libbpf_bcc.so
 vendor/lib64/libtflite.so
 vendor/lib64/xiaomi.system.hypsys.common-V1-ndk.so
+vendor/lib64/wifi_legacy.so
+vendor/lib64/libtinycompress.so
