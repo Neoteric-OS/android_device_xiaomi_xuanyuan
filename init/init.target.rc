@@ -128,6 +128,10 @@ on late-fs
     mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs-data
+    # Stock creates this in ipacm-diag.rc, which we don't ship. Without it ipacm
+    # exits at startup and never registers the tetheroffload HAL.
+    mkdir /data/vendor/ipa 0770 radio radio
+
     chmod 0666 /dev/migt
     restorecon /dev/migt
     chmod 0777 /sys/module/migt/parameters/migt_freq
