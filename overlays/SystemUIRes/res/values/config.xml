@@ -15,14 +15,14 @@
 
     <!-- Microns/ums (1000 um = 1mm) per pixel for the given device. If unspecified, UI that
          relies on this value will not be sized correctly. -->
-    <item format="float" name="pixel_pitch" type="dimen">55.18</item>
+    <item format="float" name="pixel_pitch" type="dimen">50</item>
 
     <!-- Default rounded corner curve (a Bezier). Must match (the curved path in) rounded.xml.
          Note that while rounded.xml includes the entire path (including the horizontal and vertical
          corner edges), this pulls out just the curve.
      -->
     <string name="config_rounded_mask" translatable="false">
-        M0,0H194S123.711,-1.438 85,24C69.437,34.227 47.5,44.815 22,87 -2.227,127.084 0,194 0,194
+        M0,0H140S89.276,-1.038 61.34,17.32C50.109,24.7 34.278,32.341 15.876,62.784 -1.607,91.71 0,140 0,140
     </string>
 
     <!-- Respect drawable/rounded.xml intrinsic size for multiple radius corner path customization -->
@@ -32,7 +32,7 @@
     <dimen name="physical_power_button_center_screen_location_y">1380px</dimen>
 
     <!-- Location on the screen of the center of the fingerprint sensor. -->
-    <dimen name="physical_fingerprint_sensor_center_screen_location_y">2490px</dimen>
+    <dimen name="physical_fingerprint_sensor_center_screen_location_y">2502px</dimen>
 
     <!-- Color of the UDFPS pressed view -->
     <color name="config_udfpsColor">#00FFFFFF</color>
