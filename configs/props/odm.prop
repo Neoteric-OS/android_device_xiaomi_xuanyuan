@@ -1,5 +1,5 @@
 # Bluetooth
-bluetooth.device.default_name=Xiaomi 14 Ultra
+bluetooth.device.default_name=Xiaomi 15 Ultra
 
 # Display
 ro.vendor.touchfeature.type=183
@@ -34,7 +34,7 @@ persist.vendor.fingerprint.type=udfps
 persist.vendor.fingerprint.sensor_location=720|2502|147
 
 # Marketname
-ro.product.marketname=Xiaomi 14 Ultra
+ro.product.marketname=Xiaomi 15 Ultra
 
 # QTI
 ro.vendor.qti.va_odm.support=1
@@ -85,4 +85,4 @@ sys.haptic.zaxis_switch=9,2
 sys.rhythmic_mode_default_level=50
 
 # USB
-vendor.usb.product_string=Xiaomi 14 Ultra
+vendor.usb.product_string=Xiaomi 15 Ultra
