@@ -45,7 +45,7 @@ persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 
 # WLAN
-ro.hardware.wlan.chip=kiwi_v2
+ro.hardware.wlan.chip=qca_cld3_peach_v2
 ro.hardware.wlan.dbs=2
 ro.hardware.wlan.mimo=1
 ro.hardware.wlan.vendor=qcom

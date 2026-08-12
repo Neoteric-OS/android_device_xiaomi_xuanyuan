@@ -2,7 +2,9 @@
 bluetooth.device.default_name=Xiaomi 15 Ultra
 
 # Display
+ro.vendor.display.hwc_set_backlight=1
 ro.vendor.touchfeature.type=183
+vendor.display.enable_cwb_notify_sensor=1
 
 # Displayfeature
 persist.vendor.dc_backlight.enable=false
@@ -38,6 +40,9 @@ ro.product.marketname=Xiaomi 15 Ultra
 
 # QTI
 ro.vendor.qti.va_odm.support=1
+
+# Sensors
+ro.vendor.sensor.maxbrightness=5460
 
 # Vibrator
 ro.odm.mm.vibrator.device_type=agm
