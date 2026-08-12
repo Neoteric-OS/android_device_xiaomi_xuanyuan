@@ -93,11 +93,6 @@
         <fqname>@1.1::IImsFactory/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.sla.service</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::ISlaService/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.xiaomi.hardware.bgservice</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IBGService/default</fqname>

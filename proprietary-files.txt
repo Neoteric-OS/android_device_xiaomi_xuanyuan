@@ -3940,14 +3940,6 @@ vendor/lib64/libultrasound_notify.so
 vendor/lib64/sensors.qsh.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate-V1-ndk.so
 
-# SLA
-vendor/bin/hw/vendor.qti.sla.service@2.0-service
-vendor/bin/slad
-vendor/etc/init/slad.rc
-vendor/etc/init/vendor.qti.sla.service@2.0-service.rc
-vendor/etc/sla/slad.conf
-vendor/lib64/vendor.qti.sla.service-V1-ndk.so
-
 # Soter
 mi_ext/product/app/SoterService/SoterService.apk:product/app/SoterService/SoterService.apk
 vendor/bin/hw/vendor.qti.hardware.soter-service
