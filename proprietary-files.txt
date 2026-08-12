@@ -3925,6 +3925,8 @@ vendor/etc/permissions/com.xiaomi.sensor.xml
 vendor/etc/sensor_diag.cfg
 vendor/etc/sensors/config/chre_dynamic_sensors.json
 vendor/etc/sensors/hals.conf
+vendor/etc/sensors/javalibs/odpmanagerlib-aar
+vendor/etc/sensors/sns_odp_config
 vendor/etc/sensors/sns_reg_config
 vendor/etc/vintf/manifest/vendor.qti.hardware.sensorscalibrate.xml
 vendor/lib64/hw/sensors.dynamic_sensor_hal.so
