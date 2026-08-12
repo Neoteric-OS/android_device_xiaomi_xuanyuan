@@ -14,16 +14,52 @@
  * limitations under the License.
  */
 
+#define LOG_TAG "vibratorfeature-wrapper"
+
 #include <android-base/logging.h>
+#include <android/binder_auto_utils.h>
 #include <android/binder_manager.h>
 #include <android/binder_process.h>
 
-int main() {
-    ABinderProcess_setThreadPoolMaxThreadCount(0);
+#include <unistd.h>
 
-    binder_status_t status = AServiceManager_addService(
-            AServiceManager_waitForService("android.hardware.vibrator.IVibrator/vibratorfeature"), "android.hardware.vibrator.IVibrator/default");
+#include "VibratorWrapper.h"
+
+using aidl::android::hardware::vibrator::IVibrator;
+using aidl::android::hardware::vibrator::VibratorWrapper;
+
+namespace {
+
+constexpr char kDownstream[] = "android.hardware.vibrator.IVibrator/vibratorfeature";
+
+// Nothing left to forward to, so let init restart us against the new one.
+void onDownstreamDied(void*) {
+    LOG(ERROR) << "downstream vibrator died, restarting";
+    _exit(EXIT_FAILURE);  // on a binder thread, skip static dtors
+}
+
+}  // namespace
+
+int main() {
+    ABinderProcess_setThreadPoolMaxThreadCount(1);
+
+    ndk::SpAIBinder binder(AServiceManager_waitForService(kDownstream));
+    auto downstream = IVibrator::fromBinder(binder);
+    CHECK(downstream != nullptr) << "no downstream vibrator to wrap";
+
+    static ndk::ScopedAIBinder_DeathRecipient recipient(
+            AIBinder_DeathRecipient_new(onDownstreamDied));
+    // Null cookie, a non-null one without onUnlinked aborts in newer libbinder_ndk.
+    binder_status_t linked = AIBinder_linkToDeath(binder.get(), recipient.get(), nullptr);
+    if (linked != STATUS_OK) {
+        LOG(WARNING) << "linkToDeath failed: " << linked;
+    }
+
+    auto wrapper = ndk::SharedRefBase::make<VibratorWrapper>(downstream);
+    const std::string instance = std::string(IVibrator::descriptor) + "/default";
+    binder_status_t status = AServiceManager_addService(wrapper->asBinder().get(), instance.c_str());
     CHECK_EQ(status, STATUS_OK);
 
-    return EXIT_SUCCESS;
+    ABinderProcess_joinThreadPool();
+    return EXIT_FAILURE;  // joinThreadPool does not return
 }
