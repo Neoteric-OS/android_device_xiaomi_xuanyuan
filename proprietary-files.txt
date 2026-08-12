@@ -1094,8 +1094,8 @@ odm/lib64/bm5a79v08s13n87.bin
 odm/lib64/bm5a79v08s13n88.bin
 odm/lib64/bm5a79v08s13n89.bin
 odm/lib64/bm5a79v08s13n90.bin
-odm/lib64/camera/aon_front_i_1.pb
-odm/lib64/camera/aon_rear_i_2.pb
+odm/lib64/camera/aon_front_i_1.pb;SYMLINK=vendor/lib64/camera/aon_front_i_1.pb
+odm/lib64/camera/aon_rear_i_2.pb;SYMLINK=vendor/lib64/camera/aon_rear_i_2.pb
 odm/lib64/camera/bitmlconfig.bin;SYMLINK=vendor/lib64/camera/bitmlconfig.bin
 odm/lib64/camera/bitmlconfig_sm7550.bin
 odm/lib64/camera/camxfl115indices.bin
@@ -1117,7 +1117,7 @@ odm/lib64/camera/com.qti.eeprom.xuanyuan_semco_LYT900_p24u128b_wide_i_eeprom.so
 odm/lib64/camera/com.qti.eeprom.xuanyuan_semco_s5khp9_sem1217s_tele5x_i_eeprom.so
 odm/lib64/camera/com.qti.eeprom.xuanyuan_sunny_ov32b40_gt24p64e_front_i_eeprom.so
 odm/lib64/camera/com.qti.eeprom.xuanyuan_sunny_s5kjn5_gt24p128f_ultra_i_eeprom.so
-odm/lib64/camera/com.qti.ofe.profiledb.default.bin
+odm/lib64/camera/com.qti.ofe.profiledb.default.bin;SYMLINK=vendor/lib64/camera/com.qti.ofe.profiledb.default.bin
 odm/lib64/camera/com.qti.ois.xuanyuan_ofilm_imx858_bu24619_tele3x_i_ois.so
 odm/lib64/camera/com.qti.ois.xuanyuan_ofilm_LYT900_bu24619_wide_ii_ois.so
 odm/lib64/camera/com.qti.ois.xuanyuan_ofilm_s5khp9_bu24631_tele5x_ii_ois.so
