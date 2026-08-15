@@ -65,27 +65,35 @@ function blob_fixup() {
         vendor/bin/hw/vendor.qti.media.c2@1.0-service | vendor/bin/hw/vendor.dolby.media.c2-default-service-dax | vendor/bin/hw/vendor.qti.media.c2audio@1.0-service)
             "${PATCHELF}" --add-needed "lib-mediac2.so" "${2}"
             ;;
-        vendor/etc/audio/sku_sun/audio_effects.xml)
-            sed -i 's|<library name="misoundfx" path="libmisoundfx.so"/>|<library name="misoundfx" path="libmisoundfx_ext.so"/>|' "${2}"
-            sed -i '/<effect name="aec" library="audio_pre_processing" uuid="0f8d0d2a-59e5-45fe-b6e4-248c8a799109"\/>/d; /<effect name="ns" library="audio_pre_processing" uuid="1d97bb0b-9e2f-4403-9ae3-58c2554306f8"\/>/d' "${2}"
-            sed -i '/^[[:space:]]*<preprocess>/,/^[[:space:]]*<\/preprocess>/c\    <!-- Disable hardware AEC/NS for VoIP. WebRTC apps can use software processing instead. -->' "${2}"
-            ;;
-        vendor/etc/audio/sku_sun/audio_effects.conf)
-            sed -i '/^# Added aec, ns effects for voice_communication/,/^}/c\# Hardware AEC/NS is disabled for VoIP so WebRTC apps can use software processing.' "${2}"
-            sed -i '/^[[:space:]]*aec {/,/^[[:space:]]*}/d; /^[[:space:]]*ns {/,/^[[:space:]]*}/d' "${2}"
-            ;;
         vendor/etc/init/hw/init.qcom.rc)
             sed -i '/interface vendor\.qti\.hardware\.wigig\.netperftuner@1\.0::INetPerfTuner default/d' "${2}"
             ;;
         vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy)
             [ "$2" = "" ] && return 0
+            [ -n "$(tail -c 1 "${2}")" ] && echo >> "${2}"
             grep -q "setsockopt: 1" "${2}" || echo "setsockopt: 1" >> "${2}"
+            grep -q "^lseek:" "${2}" || echo "lseek: 1" >> "${2}"
             ;;
         vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy)
             [ "$2" = "" ] && return 0
             [ -n "$(tail -c 1 "${2}")" ] && echo >> "${2}"
             grep -q "sched_get_priority_min: 1" "${2}" || echo "sched_get_priority_min: 1" >> "${2}"
             grep -q "sched_get_priority_max: 1" "${2}" || echo "sched_get_priority_max: 1" >> "${2}"
+            grep -q "^lseek:" "${2}" || echo "lseek: 1" >> "${2}"
+            ;;
+        vendor/etc/seccomp_policy/atfwd@2.0.policy | \
+        vendor/etc/seccomp_policy/c2audio.vendor.ext-arm.policy | \
+        vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy | \
+        vendor/etc/seccomp_policy/gnss@2.0-edgnss-daemon.policy | \
+        vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy | \
+        vendor/etc/seccomp_policy/qesdksec.policy | \
+        vendor/etc/seccomp_policy/qsap_qapeservice.policy | \
+        vendor/etc/seccomp_policy/qsap_voiceui.policy | \
+        vendor/etc/seccomp_policy/qti-systemd.policy | \
+        vendor/etc/seccomp_policy/syshealthmon.policy)
+            [ "$2" = "" ] && return 0
+            [ -n "$(tail -c 1 "${2}")" ] && echo >> "${2}"
+            grep -q "^lseek:" "${2}" || echo "lseek: 1" >> "${2}"
             ;;
         odm/lib64/libaudioroute_ext.so | vendor/lib64/libar-pal.so)
             "${PATCHELF}" --replace-needed "libaudioroute.so" "libaudioroute-v34.so" "${2}"

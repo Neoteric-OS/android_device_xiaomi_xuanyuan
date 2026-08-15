@@ -3224,6 +3224,7 @@ vendor/bin/init.qcom.class_core.sh
 vendor/bin/init.qcom.early_boot.sh
 vendor/bin/init.qcom.post_boot.sh
 vendor/bin/init.qcom.sh
+vendor/etc/fw_dir.ueventd.qcom.rc
 vendor/etc/init/hw/init.qcom.rc
 
 # IR
@@ -3530,6 +3531,7 @@ vendor/etc/init/init.qti.qcv.rc
 odm/firmware/water_check.tflite
 
 # QESDK
+system_ext/app/FrameworksUtilsSysService/FrameworksUtilsSysService.apk
 system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml
 system_ext/lib64/libqesdk_ndk_platform.qti.so
 system_ext/lib64/vendor.qti.qesdhal@1.0.so
