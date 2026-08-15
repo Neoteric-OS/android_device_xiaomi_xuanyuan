@@ -59,12 +59,6 @@ function blob_fixup() {
         odm/etc/camera/enhance_motiontuning.xml | odm/etc/camera/motiontuning.xml | odm/etc/camera/snsc_bokeh_motiontuning.xml | odm/etc/camera/snsc_motiontuning.xml | odm/etc/camera/snsc_enhance_motiontuning.xml | odm/etc/camera/snsc_noface_motiontuning.xml)
             sed -i 's/<?xml=/<?xml /g' "${2}"
             ;;
-        system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml)
-            sed -i '/\/\*\*/,/\*\//c\<!--\n * Copyright (c) 2021 Qualcomm Technologies, Inc.\n * All Rights Reserved.\n * Confidential and Proprietary - Qualcomm Technologies, Inc.\n-->' "${2}"
-            ;;
-        vendor/bin/hw/vendor.qti.media.c2@1.0-service | vendor/bin/hw/vendor.dolby.media.c2-default-service-dax | vendor/bin/hw/vendor.qti.media.c2audio@1.0-service)
-            "${PATCHELF}" --add-needed "lib-mediac2.so" "${2}"
-            ;;
         vendor/etc/init/hw/init.qcom.rc)
             sed -i '/interface vendor\.qti\.hardware\.wigig\.netperftuner@1\.0::INetPerfTuner default/d' "${2}"
             ;;
@@ -98,28 +92,12 @@ function blob_fixup() {
         odm/lib64/libaudioroute_ext.so | vendor/lib64/libar-pal.so)
             "${PATCHELF}" --replace-needed "libaudioroute.so" "libaudioroute-v34.so" "${2}"
             ;;
-        odm/lib64/hw/camera.qcom.so | odm/lib64/hw/com.qti.chi.override.so | odm/lib64/libchifeature2.so | vendor/lib64/libcameraopt.so | odm/lib64/libcamxcommonutils.so | odm/lib64/libmialgoengine.so)
-            "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "$2"
-            ;;
-        vendor/lib64/vendor.libdpmframework.so)
-            "${PATCHELF}" --add-needed "libhidlbase_shim.so" "$2"
-            "${PATCHELF}" --add-needed "libbinder_shim.so" "${2}"
-            ;;
-        vendor/lib64/libqcodec2_core.so)
-            grep -q "libcodec2_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcodec2_shim.so" "${2}"
-            ;;
         vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc)
             sed -i "s/\/odm\/bin\//\/vendor\/bin\//g" "${2}"
             sed -i "s/\/odm\/etc\//\/vendor\/etc\//g" "${2}"
             ;;
-        vendor/lib64/libqcc_sdk.so | vendor/lib64/libqms_xiaomi.so | vendor/lib64/libqms_client.so | vendor/bin/qcc-vendor | vendor/bin/xtra-daemon | vendor/bin/qms | vendor/bin/cnd | vendor/lib64/libcne.so)
-            "${PATCHELF}" --add-needed "libbinder_shim.so" "${2}"
-            ;;
         vendor/lib64/libdlbdsservice.so | vendor/lib64/libdlbpreg.so | vendor/lib64/libswspatializeraidl_ext.so | vendor/lib64/soundfx/libdlbvolaidl.so | vendor/lib64/soundfx/libhwdapaidl.so | vendor/lib64/soundfx/libswspatializeraidl.so)
             "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
-            ;;
-        vendor/bin/hw/vendor.dolby.dms.service)
-            grep -q "libstagefright_foundation-v33.so" "${2}" || "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
         vendor/etc/sensors/hals.conf)
             sed -i '$a sensors.xiaomi.so' "${2}"
