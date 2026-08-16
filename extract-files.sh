@@ -92,6 +92,9 @@ function blob_fixup() {
         odm/lib64/libaudioroute_ext.so | vendor/lib64/libar-pal.so)
             "${PATCHELF}" --replace-needed "libaudioroute.so" "libaudioroute-v34.so" "${2}"
             ;;
+        vendor/lib64/libcameraopt.so)
+            "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "$2"
+            ;;
         vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc)
             sed -i "s/\/odm\/bin\//\/vendor\/bin\//g" "${2}"
             sed -i "s/\/odm\/etc\//\/vendor\/etc\//g" "${2}"

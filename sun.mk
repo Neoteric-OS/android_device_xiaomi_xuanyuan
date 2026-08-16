@@ -472,8 +472,8 @@ PRODUCT_PACKAGES += \
     WifiResTarget_spf
 
 # Parts
-#PRODUCT_PACKAGES += \
-#    XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -570,13 +570,9 @@ PRODUCT_COPY_FILES += \
 # Shims
 PRODUCT_PACKAGES += \
     libaudioroute-v34 \
-    libbinder_shim.vendor \
-    libcodec2_shim \
-    libhidlbase_shim \
-    lib-mediac2 \
     libprocessgroup_shim \
     libstagefright_foundation-v33.vendor \
-    libui-v34
+    libprocessgroup.vendor
 
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 202404
