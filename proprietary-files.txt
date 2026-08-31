@@ -1212,6 +1212,10 @@ odm/lib64/hw/camera.qcom.sm8750.so
 odm/lib64/hw/com.qti.chi.offline.so
 odm/lib64/libSNPE.so;SYMLINK=vendor/lib64/libSNPE.so
 odm/lib64/libcamxexternalformatutils.so;SYMLINK=vendor/lib64/libcamxexternalformatutils.so
+odm/lib64/com.xiaomi.messagecenter.so
+odm/lib64/libcom.xiaomi.ionutils.so
+odm/lib64/libqfdadapter.so
+odm/lib64/libqfdservice.so
 odm/lib64/bm5a73v04s13n00.bin
 odm/lib64/bm5a73v04s13n01.bin
 odm/lib64/bm5a73v04s13n02.bin
@@ -3440,6 +3444,19 @@ odm/lib64/libQnnModelDlc.so
 odm/lib64/libQnnSaver.so
 odm/lib64/libQnnSystem.so
 
+# MiSys / HypSys
+vendor/bin/hypsys_vendor
+vendor/bin/hw/vendor.xiaomi.hardware.misys.core-service
+vendor/etc/init/hypsys_vendor.rc
+vendor/etc/init/vendor.xiaomi.hardware.misys.core-service.rc
+vendor/etc/vintf/manifest/manifest_blackbox.xml
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys.common.xml
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys.core.xml
+vendor/lib64/vendor.xiaomi.hardware.blackbox-V1-ndk.so
+vendor/lib64/vendor.xiaomi.hardware.misys.common-V3-ndk.so
+vendor/lib64/vendor.xiaomi.hardware.misys.core-V1-ndk.so
+vendor/lib64/xiaomi.system.hypsys.common-V1-ndk.so
+
 # NFC
 odm/bin/hw/android.hardware.nfc-service-st
 odm/etc/init/nfc-service-st.rc
@@ -4637,4 +4654,3 @@ vendor/lib64/libbpf_bcc.so
 vendor/lib64/libtflite.so
 vendor/lib64/libtinycompress.so
 vendor/lib64/wifi_legacy.so
-vendor/lib64/xiaomi.system.hypsys.common-V1-ndk.so
