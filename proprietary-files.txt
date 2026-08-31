@@ -1668,6 +1668,8 @@ vendor/lib64/libScenescape.so
 vendor/lib64/libcamera2ndk_vendor.so
 vendor/lib64/libcameraobserver.so
 vendor/lib64/libcameraopt.so
+vendor/lib64/libbpf_minimal.so
+vendor/lib64/libcamerapoweroptfeature.so
 vendor/lib64/libcv_common.so
 vendor/lib64/libeva.so
 vendor/lib64/libeye_tracking_dsp_sample_stub.so
@@ -2442,6 +2444,7 @@ odm/etc/camera/xmi_slmt_4x_720p.dlc
 odm/etc/video_thumbnail_lut.png
 vendor/etc/camera/cameraopt_perf.json
 vendor/etc/camera/cameraopt_vendor.json
+vendor/etc/pwr/CameraPowerOptFeature.xml
 vendor/etc/external_camera_config.xml
 
 # Camera firmware
@@ -2914,6 +2917,7 @@ vendor/lib64/vendor.xiaomi.hardware.displayfeature_aidl-V2-ndk.so
 # Display Gralloc
 vendor/lib64/libgralloccore.so
 vendor/lib64/libgrallocutils.so
+vendor/lib64/libmapperutils.so
 
 # Display HDR
 vendor/lib64/libhdr_backlight_adapter.so

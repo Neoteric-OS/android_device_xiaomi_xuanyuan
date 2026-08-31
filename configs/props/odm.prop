@@ -1,6 +1,21 @@
 # Bluetooth
 bluetooth.device.default_name=Xiaomi 15 Ultra
 
+# Camera
+persist.sys.miui.camera.quickcamera.supported=true
+persist.vendor.camera.IsStreetModeSupported=true
+persist.vendor.usb.camerahandle=true
+persist.vendor.vcb.ability=true
+persist.vendor.vcb.enable=false
+ro.miui.support.aon.facev2=1
+ro.miui.support.aon.flare=1
+ro.miui.support.aon.hand=1
+ro.miui.support.aon.qrcode=1
+ro.miui.support.light.fov=1
+ro.product.camera.livephoto.support=3
+ro.vendor.camera.interpolation.mialgo.support=true
+ro.vendor.dynamiccamera.ability_level=2
+
 # Display
 ro.vendor.display.hwc_set_backlight=1
 ro.vendor.touchfeature.type=183
@@ -20,6 +35,7 @@ ro.vendor.display.nature_mode.enable=true
 ro.vendor.display.standard_d75_enable=true
 ro.vendor.display.touch.idle.enable=true
 ro.vendor.display.type=oled
+ro.vendor.display.video_or_camera_fps.support=true
 ro.vendor.fps.switch.default=true
 ro.vendor.fps.switch.thermal=true
 ro.vendor.gcp.enable=1
@@ -45,6 +61,8 @@ ro.product.marketname=Xiaomi 15 Ultra
 ro.vendor.qti.va_odm.support=1
 
 # Sensors
+persist.vendor.sensor.vl53l8.debug=false
+ro.vendor.proxcal.factor=2.8
 ro.vendor.sensor.maxbrightness=5460
 
 # Vibrator
