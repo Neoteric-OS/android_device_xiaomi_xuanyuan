@@ -95,6 +95,12 @@ function blob_fixup() {
         vendor/lib64/libcameraopt.so)
             "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "$2"
             ;;
+        odm/etc/init/vendor.qti.camera.provider-service_64.rc)
+            sed -i '/^service vendor\.camera-provider /a\    setenv JE_MALLOC_ZERO_FILLING 1' "${2}"
+            ;;
+        vendor/etc/init/vendor.qti.hardware.display.composer-service.rc)
+            sed -i '/^service vendor\.qti\.hardware\.display\.composer /a\    setenv JE_MALLOC_ZERO_FILLING 1' "${2}"
+            ;;
         vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc)
             sed -i "s/\/odm\/bin\//\/vendor\/bin\//g" "${2}"
             sed -i "s/\/odm\/etc\//\/vendor\/etc\//g" "${2}"

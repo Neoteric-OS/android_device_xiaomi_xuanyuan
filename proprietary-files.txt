@@ -4654,3 +4654,4 @@ vendor/lib64/libbpf_bcc.so
 vendor/lib64/libtflite.so
 vendor/lib64/libtinycompress.so
 vendor/lib64/wifi_legacy.so
+odm/lib64/libharbo.so

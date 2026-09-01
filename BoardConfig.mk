@@ -72,6 +72,9 @@ TARGET_SCREEN_DENSITY := 560
 # DTB
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
+# Graphics
+$(call soong_config_set,libui,legacy_graphicbuffer_abi,true)
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml
