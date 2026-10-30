@@ -59,6 +59,9 @@ function blob_fixup() {
         odm/etc/camera/enhance_motiontuning.xml | odm/etc/camera/motiontuning.xml | odm/etc/camera/snsc_bokeh_motiontuning.xml | odm/etc/camera/snsc_motiontuning.xml | odm/etc/camera/snsc_enhance_motiontuning.xml | odm/etc/camera/snsc_noface_motiontuning.xml)
             sed -i 's/<?xml=/<?xml /g' "${2}"
             ;;
+        odm/etc/audio/sku_sun/resourcemanager_sun_mtp.xml)
+            sed -i 's/<param concurrent_capture="false" \/>/<param concurrent_capture="true" \/>/' "${2}"
+            ;;
         vendor/etc/init/hw/init.qcom.rc)
             sed -i '/interface vendor\.qti\.hardware\.wigig\.netperftuner@1\.0::INetPerfTuner default/d' "${2}"
             ;;
