@@ -9,8 +9,10 @@
 /data/vendor/misc/mi_fp(/.*)? u:object_r:vendor_fingerprint_data_file:s0
 /data/vendor/fpc(/.*)? u:object_r:vendor_fingerprint_data_file:s0
 /data/vendor/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/fpdump(/.*)? u:object_r:vendor_fingerprint_data_file_fpdump:s0
 /dev/goodix_fp u:object_r:vendor_fingerprint_device:s0
 /mnt/vendor/persist/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
+/mnt/vendor/persist/fingerprint(/.*)? u:object_r:vendor_fingerprint_data_file:s0
 /sys/devices/virtual/touch/tp_dev/fod_status u:object_r:sysfs_tp_fodstatus:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi              u:object_r:hal_fingerprint_default_exec:s0
 
@@ -108,6 +110,7 @@
 
 # NFC
 /(odm|vendor/odm|vendor|system/vendor)/bin/hw/android\.hardware\.nqnfc-service\.nxp u:object_r:hal_nfc_default_exec:s0
+/(odm|vendor/odm)/bin/hw/android\.hardware\.nfc-service-st u:object_r:hal_nfc_default_exec:s0
 
 # Touchfeature
 /(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hw\.touchfeature-service   u:object_r:hal_touchfeature_xiaomi_default_exec:s0

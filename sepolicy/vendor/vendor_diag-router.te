@@ -1,0 +1,4 @@
+userdebug_or_eng(`
+  allow vendor_diag-router vendor_modem_data_file:dir rw_dir_perms;
+  allow vendor_diag-router vendor_modem_data_file:fifo_file create_file_perms;
+')

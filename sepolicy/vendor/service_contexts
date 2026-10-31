@@ -1,5 +1,7 @@
 # Camera
 vendor.xiaomi.hardware.aon.IAlwaysOn/miaonservicehal           u:object_r:vendor_hal_camera_aon_service:s0
+vendor.xiaomi.hardware.aidl.intentaware.IIntentAwareService/default     u:object_r:vendor_aidlintentaware_service:s0
+vendor.xiaomi.hardware.camera.synthetic.IVirtualCameraRegistrar/default  u:object_r:vendor_hal_dynamic_camera_service:s0
 
 # CIT
 # EID
@@ -26,3 +28,4 @@ vendor.qti.qspmhal.IQspmhal/default                           u:object_r:vendor_
 
 # Vibrator
 android.hardware.vibrator.IVibrator/vibratorfeature                          u:object_r:hal_vibrator_service:s0
+vendor.xiaomi.hardware.postprocservice.IPostProcService/default     u:object_r:vendor_hal_postprocservice_xiaomi_service:s0

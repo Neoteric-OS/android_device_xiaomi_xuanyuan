@@ -1,0 +1,4 @@
+type vendor_hal_postprocservice_xiaomi_service, hal_service_type, protected_service, service_manager_type;
+
+add_service(hal_camera_server, vendor_hal_postprocservice_xiaomi_service)
+allow { platform_app_all priv_app priv_app_36 } vendor_hal_postprocservice_xiaomi_service:service_manager find;

@@ -33,10 +33,6 @@ TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := oryon
 
 # Audio
-# Use the prebuilt QTI audio HAL from the vendor blobs rather than building
-# pal/agm/primary-hal from source.  This is what hardware/qcom-caf/sm8750/audio/
-# primary-hal/configs/sun/sun.mk does upstream, but that config is only reached
-# via the "audio" entry in TARGET_COMMON_QTI_COMPONENTS, which we don't inherit.
 AUDIO_USE_STUB_HAL := true
 AUDIO_FEATURE_ENABLED_DLKM := true
 AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
@@ -97,8 +93,6 @@ BOARD_BOOTCONFIG := \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.vendor.qspa=true \
     androidboot.console=0
-
-BOARD_BOOTCONFIG += androidboot.selinux=permissive
 
 BOARD_KERNEL_CMDLINE := \
     bootinfo.fingerprint=$(NEOTERIC_VERSION) \
