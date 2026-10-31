@@ -18,8 +18,8 @@ PRODUCT_MODEL := 25010PN30G
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="xuanyuan_eea-user 15 AQ3A.250226.002 OS3.0.303.0.WOAEUXM release-keys" \
-    BuildFingerprint=Xiaomi/xuanyuan_eea/xuanyuan:15/AQ3A.250226.002/OS3.0.303.0.WOAEUXM:user/release-keys \
+    BuildDesc="xuanyuan-user 15 AQ3A.250226.002 OS3.0.314.0.WOACNXM release-keys" \
+    BuildFingerprint=Xiaomi/xuanyuan/xuanyuan:15/AQ3A.250226.002/OS3.0.314.0.WOACNXM:user/release-keys \
     DeviceName=xuanyuan \
     DeviceProduct=xuanyuan \
     SystemDevice=xuanyuan \

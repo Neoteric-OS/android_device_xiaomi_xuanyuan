@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from xuanyuan OS3.0.303.0.WOAEUXM
+# All unpinned blobs below are extracted from xuanyuan OS3.0.314.0.WOACNXM
 
 # ACDB
 odm/etc/acdbdata/Mi/Mi_acdb_cal.acdb:odm/etc/acdbdata/Mi_acdb_cal.acdb
@@ -852,6 +852,7 @@ odm/etc/camera/dualcam_caputre_h512w512_quan16.minn
 odm/etc/camera/dualcam_caputre_h768w1024_quan16.minn
 odm/etc/camera/eclipse.bin
 odm/etc/camera/facesr_ff_v6.0.16_qcom8750_rQsQ_hd@nb_hdRGB20241111lg0927yuvQnn2.24.15x64Q35.2bin_20241128.model
+odm/etc/camera/facesr_ff_v6.0.60_qcom8750_rQsQ_hd@nb_hd09210408LHNoiseQnn2.24.19Q35.3_fast_20260422.model
 odm/etc/camera/fluo.dlc
 odm/etc/camera/fs_detect_1st.dlc
 odm/etc/camera/fuai_82a15ef3_14438880906624631965_runnercache.bin
@@ -940,6 +941,7 @@ odm/etc/vintf/manifest/vendor.qti.camera.provider.xml
 odm/etc/vintf/manifest/vendor.xiaomi.camera.aon-impl.xml
 odm/etc/vintf/manifest/vendor.xiaomi.hardware.aidl.intentaware-service.xml
 odm/etc/vintf/manifest/vendor.xiaomi.hardware.aidlbgservice-service.xml
+odm/etc/vintf/manifest/vendor.xiaomi.hardware.postprocservice-service.xml
 odm/firmware/stmvl53l8.bin
 odm/lib64/camera/aon_front_i_1.pb;SYMLINK=vendor/lib64/camera/aon_front_i_1.pb
 odm/lib64/camera/aon_rear_i_2.pb;SYMLINK=vendor/lib64/camera/aon_rear_i_2.pb
@@ -1081,6 +1083,7 @@ odm/lib64/camera/plugins/com.xiaomi.plugin.arcsoftPT.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.arcsoftSSSH.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.arcsoftTFPSN.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.arcsoftrawhdr.so
+odm/lib64/camera/plugins/com.xiaomi.plugin.arcsoftsr.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.arcsoftvideobokeh.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.beautydeformation.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.capbokeh.so
@@ -1093,6 +1096,7 @@ odm/lib64/camera/plugins/com.xiaomi.plugin.frontbokeh.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.gainmap.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.gainmapPostProc.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.heifedit.so
+odm/lib64/camera/plugins/com.xiaomi.plugin.highresenhance.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.jpegrAggr.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.losslessjpeg.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.mialgoanchor.so
@@ -1195,7 +1199,6 @@ odm/lib64/camera/com.qti.tuned.xuanyuan_ofilm_s5khp9_tele5x_ii.bin
 odm/lib64/camera/com.qti.tuned.xuanyuan_semco_LYT900_wide_i.bin
 odm/lib64/camera/com.qti.tuned.xuanyuan_semco_s5khp9_tele5x_i.bin
 odm/lib64/camera/com.qti.tuned.xuanyuan_sunny_ov32b40_front_i.bin
-odm/lib64/camera/com.qti.tuned.xuanyuan_sunny_ov32b40_front_i_cn.bin
 odm/lib64/camera/com.qti.tuned.xuanyuan_sunny_s5kjn5_ultra_i.bin
 odm/lib64/camera/fdconfigoffline.bin
 odm/lib64/camera/fdconfigpreview.bin
@@ -1468,6 +1471,7 @@ odm/lib64/libarc.ion.so
 odm/lib64/libarcsoft_astronomical_photography.so
 odm/lib64/libarcsoft_intelligent_focus.so
 odm/lib64/libarcsoft_pic_trace.so
+odm/lib64/libarcsoft_pristine_resolution.so
 odm/lib64/libarcsoft_qnnhtp.so
 odm/lib64/libarcsoft_raw_sr.so
 odm/lib64/libarcsoft_scbokeh_video.so
@@ -1525,6 +1529,7 @@ odm/lib64/libcom.xiaomi.sensorpolicy.so
 odm/lib64/libcom.xiaomi.signaltrigger.so
 odm/lib64/libcommonchiutils.so
 odm/lib64/libdeflicker.so
+odm/lib64/libdlrmsc.so
 odm/lib64/libdlrmsc_android15.so
 odm/lib64/libecdpreproc.so
 odm/lib64/libecoengine.so
@@ -1620,6 +1625,7 @@ odm/lib64/libopencv.so
 odm/lib64/libopencv3a.so
 odm/lib64/libopestriping.so
 odm/lib64/libportrait_repair_qnn.so
+odm/lib64/libportrait_repair_qnn_2e.so
 odm/lib64/libpostprocinfo.so
 odm/lib64/libproj_qmot_tracker.so
 odm/lib64/libproj_sot.so
@@ -1628,7 +1634,9 @@ odm/lib64/libqllengine.so
 odm/lib64/libqsegnet.so
 odm/lib64/libqshcamera.so
 odm/lib64/libremosaic_wrapper.so
+odm/lib64/libremosaic_wrapper_xtc.so
 odm/lib64/libremosaiclib.so
+odm/lib64/libremosaiclib_xtc.so
 odm/lib64/librfs_warp.so
 odm/lib64/libsfeShiftExtrapolation.so
 odm/lib64/libshadowhook.so
@@ -1652,6 +1660,8 @@ odm/lib64/vendor.xiaomi.hardware.aidlbgservice-V1-impl.so
 odm/lib64/vendor.xiaomi.hardware.aidlbgservice-V1-ndk.so
 odm/lib64/vendor.xiaomi.hardware.bgservice@1.0-impl.so
 odm/lib64/vendor.xiaomi.hardware.bgservice@1.0.so
+odm/lib64/vendor.xiaomi.hardware.postprocservice-V1-impl.so
+odm/lib64/vendor.xiaomi.hardware.postprocservice-V1-ndk.so
 odm/lib64/vl53l8.core.so
 odm/lib64/vl53l8.hal@1.0.so
 odm/lib64/vl53l8.hal@2.0.so
@@ -2302,12 +2312,14 @@ odm/etc/camera/xiaomi/ecoMetaInfo.json
 odm/etc/camera/xiaomi/ecoModeconfig.json
 odm/etc/camera/xiaomi/ecoenginevendorstreamconfig.json
 odm/etc/camera/xiaomi/frontbokehsnapshot.json
+odm/etc/camera/xiaomi/frontofflinelivephoto.json
 odm/etc/camera/xiaomi/frontsinglesnapshot.json
 odm/etc/camera/xiaomi/frontsupernightsnapshot.json
 odm/etc/camera/xiaomi/leicasnapshot.json
 odm/etc/camera/xiaomi/manualrawsnapshot.json
 odm/etc/camera/xiaomi/manualsnapshot.json
 odm/etc/camera/xiaomi/manualultrarawsnapshot.json
+odm/etc/camera/xiaomi/masterlivephotovideo.json
 odm/etc/camera/xiaomi/miuicamerayuv2heic.json
 odm/etc/camera/xiaomi/miuicamerayuv2jpeg.json
 odm/etc/camera/xiaomi/miviprocesstimethreshold.json
@@ -2316,6 +2328,9 @@ odm/etc/camera/xiaomi/mivisettings.json
 odm/etc/camera/xiaomi/mivistreamformat.json
 odm/etc/camera/xiaomi/mivivendorstreamconfig.json
 odm/etc/camera/xiaomi/normalsnapshot.json
+odm/etc/camera/xiaomi/offline4klivephoto.json
+odm/etc/camera/xiaomi/offline4klivephotocarpet.json
+odm/etc/camera/xiaomi/offlinelivephoto.json
 odm/etc/camera/xiaomi/overridesettings.json
 odm/etc/camera/xiaomi/rearsupernightsnapshot.json
 odm/etc/camera/xiaomi/satburstsnapshot.json
@@ -2693,11 +2708,6 @@ vendor/bin/ssgtzd
 vendor/etc/init/qwesd.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/ssg/tz_whitelist.json
-
-# Context Hub
-odm/etc/init/android.hardware.contexthub-service.qmi.rc
-odm/etc/permissions/android.hardware.context_hub.xml
-vendor/bin/hw/android.hardware.contexthub-service.qmi
 
 # Data
 vendor/bin/adpl
@@ -3184,9 +3194,9 @@ vendor/gpu/kbc/unified_ksqs.bin
 vendor/gpu/kbc/unified_ksqs_a730.bin
 
 # Hotword enrollment
-product/etc/permissions/privapp-permissions-google-audio-system.xml:product/etc/permissions/privapp-permissions-hotword.xml
-product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk
-product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk
+product/etc/permissions/privapp-permissions-google-audio-system.xml:product/etc/permissions/privapp-permissions-hotword.xml|b7f69747f8e892f0848d5d61b9aeb5b05af9e277
+product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk|368fc8e844306eef0effa37a02040da356d9b1e3
+product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk|1c18b1e33ee0dcfbaeb8d94cbd6f655259e332c3
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
@@ -4070,6 +4080,7 @@ odm/etc/thermal-sphone.conf
 odm/etc/thermal-tgame.conf
 odm/etc/thermal-video.conf
 odm/etc/thermal-videochat.conf
+odm/etc/thermalbreakboostconfig.xml
 vendor/etc/thermal-engine.conf
 vendor/etc/thermal-map.conf
 vendor/etc/thermald-devices.conf
