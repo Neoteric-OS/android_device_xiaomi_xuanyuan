@@ -1,2 +1,5 @@
+# Camera
+type dio_dma_mapper_device, dev_type;
+
 # Fingerprint
 type vendor_fingerprint_device, dev_type;

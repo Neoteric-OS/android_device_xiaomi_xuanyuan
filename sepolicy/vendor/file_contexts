@@ -1,6 +1,7 @@
 # Camera
 /(|odm|vendor/odm)/bin/hw/vendor\.qti\.camera\.provider-service_64 u:object_r:hal_camera_default_exec:s0
 /dev/camlog        u:object_r:camlog_device:s0
+/dev/dio_dma_mapper_misc u:object_r:dio_dma_mapper_device:s0
 
 # EID
 /(vendor|system/vendor)/bin/hw/vendor\.rongcard\.eid@1\.0-service                      u:object_r:vendor_hal_eid_rc_exec:s0

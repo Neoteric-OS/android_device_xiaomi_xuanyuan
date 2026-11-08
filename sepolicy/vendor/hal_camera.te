@@ -33,4 +33,4 @@ add_service(hal_camera_server, vendor_hal_dynamic_camera_service)
 allow { hal_camera_client platform_app_all system_app } vendor_hal_dynamic_camera_service:service_manager find;
 add_service(hal_camera_default, vendor_aidlintentaware_service)
 allow { cameraserver platform_app_all system_app system_server } vendor_aidlintentaware_service:service_manager find;
-
+allow hal_camera_default dio_dma_mapper_device:chr_file rw_file_perms;
